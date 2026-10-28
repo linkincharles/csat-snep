@@ -7,7 +7,7 @@ set -e
 # Esta versão é imutável. Não usa uma branch pública mutável como fonte da instalação.
 REPOSITORY_COMMIT="772eeb7"
 ARCHIVE_URL="https://github.com/linkincharles/csat-snep/archive/${REPOSITORY_COMMIT}.zip"
-ARCHIVE_SHA256="PENDENTE"
+ARCHIVE_SHA256="bdc3950f941b371f8616c3e3bf8e541dcab438be9ba9858a7dbcf794c6345b5a"
 TEMP_DIR=$(mktemp -d)
 
 cleanup() {
@@ -17,11 +17,6 @@ trap cleanup EXIT INT TERM
 
 if [ "$(id -u)" -ne 0 ]; then
     echo "Execute como root: sudo sh install-from-github.sh"
-    exit 1
-fi
-
-if [ "$ARCHIVE_SHA256" = "PENDENTE" ]; then
-    echo "O instalador ainda não foi publicado com uma assinatura de integridade."
     exit 1
 fi
 
