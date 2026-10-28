@@ -24,6 +24,17 @@ sudo sh install.sh
 
 O instalador pede o usuário de acesso, usa `admin` como padrão, solicita a senha de modo interativo e configura a proteção do Apache. Ele também cria a tabela `csat_avaliacoes` caso ela ainda não exista, usando as credenciais do `/etc/odbc.ini`. Se a tabela já existir, seus dados permanecem intactos. Para atualizar uma instalação existente, execute novamente o mesmo comando e confirme a atualização.
 
+### Instalação direta pelo GitHub
+
+Em um SNEP com acesso à internet, baixe e execute o instalador remoto:
+
+```bash
+curl -fL https://raw.githubusercontent.com/linkincharles/csat-snep/main/install-from-github.sh -o install-csat.sh
+sudo sh install-csat.sh
+```
+
+Ele baixa uma versão imutável do pacote e valida a assinatura SHA 256 antes de executar a instalação completa. O SNEP precisa ter `curl` ou `wget`, além de `unzip` e `sha256sum`.
+
 ### Áudios do Asterisk
 
 Antes de copiar a pasta para outro SNEP, inclua nela estes três arquivos:
