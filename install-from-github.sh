@@ -51,4 +51,4 @@ if [ ! -f "$SOURCE_DIR/install.sh" ]; then
 fi
 
 cd "$SOURCE_DIR"
-exec sh ./install.sh
+sh ./install.sh
