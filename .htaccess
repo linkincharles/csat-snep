@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "PRATICAR"
+AuthUserFile /etc/apache2/csat.htpasswd
+Require user admin
+Options -Indexes

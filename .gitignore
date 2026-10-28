@@ -1,0 +1,7 @@
+# Credenciais e arquivos gerados no servidor
+.htpasswd
+csat.htpasswd
+*.log
+*.bak
+*.swp
+.DS_Store
